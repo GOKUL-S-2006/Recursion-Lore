@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void printNumbers_1_to_n(int n, int current = 1) {
+    if (current > n) return;
+    cout << current << " ";
+    printNumbers(n, current + 1);
+}
+void printNumbers_n_to_1(int n) {
+    if (n < 1) return;
+    cout << n << " ";
+    printNumbers(n - 1);
+}
+
+int main() {
+    int n;
+    cin >> n;
+    printNumbers_1_to_n(n);
+     printNumbers_n_to_1(n);
+    return 0;
+}
